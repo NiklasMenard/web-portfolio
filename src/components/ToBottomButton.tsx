@@ -1,16 +1,12 @@
-import React from 'react';
 import styled from "styled-components";
 import { ReactComponent as DownArrow } from "../assets/down-arrow.svg";
 import { HashLink } from "react-router-hash-link";
 
-const ToBottomButton = () => {
-
-  return (
-    <StyledHashLink to="/#what-i-offer">
-      <StyledDownArrow/>
-    </StyledHashLink>
-  );
-};
+const ToBottomButton = () => (
+  <StyledHashLink to="/#what-i-offer">
+    <StyledDownArrow />
+  </StyledHashLink>
+);
 
 const StyledDownArrow = styled(DownArrow)`
   height: 3.5rem;

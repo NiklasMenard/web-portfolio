@@ -34,11 +34,10 @@ export const CenterContainer = styled(FadeInEffect)<ICenterContainer>`
   max-width: 35rem;
   text-align: center;
   min-height: ${(props) => props.height};
-  @media only screen and (min-width: ${(props) =>
-      props.theme.mediaQuery.tabletWidth}) {
+  @media only screen and (min-width: ${(props) => props.theme.mediaQuery.tabletWidth}) {
     min-height: 130vh;
   }
-  * {
+  svg {
     margin: 1rem;
   }
 `;

@@ -1,9 +1,9 @@
-import React from "react";
+import  { ReactNode } from "react";
 import styled from "styled-components";
-import { ChildrenProps } from "../types";
 
-const MainContainer = (props: ChildrenProps) => {
-  return <Main>{props.children}</Main>;
+
+const MainContainer = ({children}: {children: ReactNode}) => {
+  return <Main>{children}</Main>;
 };
 
 const Main = styled.main`
