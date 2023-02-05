@@ -39,27 +39,27 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
-  html {
+html {
     height: 100%;
     scroll-behavior:smooth
   }
 
-  #root {
+#root {
     height: 100%;
   }
 
-  ul {
+ul {
     padding: 0;
     list-style-type: none;
   }
 
 
-  *, *::after, *::before {
+*, *::after, *::before {
     box-sizing: border-box;
     font-family: IBM Plex Mono,monospace;
   }
   
-  input, select, div {
+input, select, div {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -83,7 +83,7 @@ h1, h2, h3, h4, p, a, span, li {
 }
 img { border-style: none; }
 
-h1, a, li {
+h1, h2, h3, a, li {
   font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
 }
 

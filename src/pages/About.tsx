@@ -11,30 +11,30 @@ import { ReactComponent as CSharpIcon } from '../assets/csharp.svg';
 const About = () => {
   return (
     <AboutSection>
-      <h1> Hello, My Name is Niklas</h1>
+      <h1>Hi, my name is Niklas</h1>
       <p>
-        Programming started as a hobby but quickly grew to something I want to pursue full time and
-        something I feel very passionate about. I feel like in order to be a great programmer you
-        must have an unquenchable need to solve problems. Encountering roadblocks on the path to the
-        solution is part of the process and ultimately that is what makes it so gratifying when you
-        finally see the pieces of the puzzle lock into place.
+        I am a full-stack web and mobile developer with a passion for programming. I started my
+        journey as a hobbyist, but soon realized that it was my calling. To me, being a great
+        programmer requires an insatiable thirst for solving problems, and I relish the challenge of
+        overcoming obstacles along the way.
       </p>
       <Row>
         <h2>What do I offer</h2>
         <ToBottomButton />
       </Row>
       <p id="what-i-offer">
-        I am a problem solver with a background in marketing, sales and finance. My main focus
-        currently is fullstack web and mobile development. I am currently working as a web developer
-        and have a bachelors degree in computer science.
+        I bring a unique blend of skills to the table, with a background in marketing, sales, and
+        finance, and a bachelor's degree in computer science. My diverse experience has given me a
+        deep understanding of customer needs and a strategic approach to solving complex problems.
       </p>
       <p>
-        My biggest strength is that im not only a programmer but somebody who has a thorough
-        understanding of customer needs and how to answer them.
+        My aim is to leverage my technical skills and business acumen to deliver innovative
+        solutions that meet the needs of my clients. If you're looking for a talented developer who
+        can help bring your ideas to life, look no further.
       </p>
 
       <SkillsList>
-        <h2>Technical skills</h2>
+        <h2>My Technical skills</h2>
         <li>
           React <ReactIcon />
         </li>
@@ -75,8 +75,8 @@ const SkillsList = styled.ul`
   }
 
   svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 `;
 

@@ -6,8 +6,6 @@ const CenterSection = ({ children }: { children: ReactNode }) => {
 };
 
 const Main = styled.main`
-  display: flex;
-  justify-content: center;
   grid-row: 2;
 `;
 

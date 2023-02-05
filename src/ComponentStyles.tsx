@@ -3,7 +3,7 @@ import background_image from './assets/background-moon.png';
 
 export const PancakeStack = styled.div`
   display: grid;
-  grid-template-rows: 15vh auto;
+  grid-template-rows: 10vh auto;
   position: relative;
   height: 100%;
 `;
@@ -32,9 +32,11 @@ interface ICenterContainer {
 }
 
 export const CenterContainer = styled(FadeInEffect)<ICenterContainer>`
-  max-width: 45rem;
+  max-width: 35rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
   text-align: center;
-  min-height: 100%;
+
   div,
   ul {
     &:last-child {

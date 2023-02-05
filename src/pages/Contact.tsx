@@ -1,21 +1,32 @@
-import { useRef } from 'react';
+import styled from 'styled-components';
+import { ReactComponent as LinkedinIcon } from '../assets/linkedin.svg';
+import { ReactComponent as GithubIcon } from '../assets/github.svg';
+import { CenterContainer } from '../ComponentStyles';
 
-import ContactInfo from '../components/ContactInfo';
-import Header from '../containers/Header';
-import CenterSection from '../containers/CenterSection';
-
-import { MoonLayer, PancakeStack } from '../ComponentStyles';
-
-const Contact = () => {
+const ContactInfo = () => {
   return (
-    <PancakeStack>
-      <Header />
-      <CenterSection>
-        <ContactInfo />
-      </CenterSection>
-      <MoonLayer />
-    </PancakeStack>
+    <CenterContainer>
+      <h1>Best way to contact me is through LinkedIn</h1>
+      <h2>Checkout my GitHub as well</h2>
+      <IconBox>
+        <a href="https://linkedin.com/in/niklas-menard">
+          <LinkedinIcon xlinkHref="https://linkedin.com/in/niklas-menard" />
+        </a>
+        <a href="https://github.com/NiklasMenard">
+          <GithubIcon />
+        </a>
+      </IconBox>
+    </CenterContainer>
   );
 };
 
-export default Contact;
+const IconBox = styled.div`
+  display: flex;
+  justify-content: center;
+  svg {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+`;
+
+export default ContactInfo;

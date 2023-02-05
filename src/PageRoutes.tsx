@@ -1,16 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
 
-import HomePage from './pages/Home';
-import Contact from './pages/Contact';
-import Projects from './pages/Projects';
+import About from './pages/About';
+import ProjectList from './pages/Projects';
+import ContactInfo from './pages/Contact';
 
 const PageRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/projects" element={<ProjectList />} />
+        <Route path="/contact" element={<ContactInfo />} />
+      </Routes>
+    </>
   );
 };
 
