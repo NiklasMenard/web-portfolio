@@ -1,12 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { ReactComponent as LinkedinIcon } from "../assets/linkedin.svg";
-import { ReactComponent as GithubIcon } from "../assets/github.svg";
-import { CenterContainer } from "../ComponentStyles";
+import styled from 'styled-components';
+import { ReactComponent as LinkedinIcon } from '../assets/linkedin.svg';
+import { ReactComponent as GithubIcon } from '../assets/github.svg';
+import { CenterContainer } from '../ComponentStyles';
 
 const ContactInfo = () => {
   return (
-    <CenterContainer height={"0"}>
+    <CenterContainer>
       <h1>Best way to contact me is through LinkedIn</h1>
       <h3>Checkout my GitHub as well</h3>
       <IconBox>
@@ -17,8 +16,6 @@ const ContactInfo = () => {
           <GithubIcon />
         </a>
       </IconBox>
-
-
     </CenterContainer>
   );
 };

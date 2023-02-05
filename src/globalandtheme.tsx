@@ -1,25 +1,52 @@
-import { createGlobalStyle, ThemeProvider, DefaultTheme } from "styled-components";
-import React, { PropsWithChildren } from "react";
-
+import { createGlobalStyle, ThemeProvider, DefaultTheme } from 'styled-components';
+import { PropsWithChildren } from 'react';
 
 const GlobalStyle = createGlobalStyle`
-
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap');
 
   body {
     margin: 0; 
     padding: 0; 
     border: 0;
     background-color: #333333;
- 
+    height: 100%;
+    overflow-y: scroll;
+
+
+  &::-webkit-scrollbar {
+    width: 1.5rem;
+    height: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(left, #888, #777);
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.9);
+  }
 
   }
 
   html {
+    height: 100%;
     scroll-behavior:smooth
   }
 
+  #root {
+    height: 100%;
+  }
 
   ul {
     padding: 0;
@@ -70,37 +97,20 @@ a{
   position: relative;
 }
 
-a::after{
-  content: "";
-  background: white;
-	mix-blend-mode: exclusion;
-  width: calc(100% + 1rem);
-  height: 0;
-  position: absolute;
-  bottom: -0.25rem;
-  left: -0.7rem;
-  border-radius: 0.75rem;
-	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-
-a:hover::after{
-	height: calc(100% + 0.5rem)
-}
-
 `;
 
 const theme: DefaultTheme = {
   colors: {
-    moonGrey: "rgb(51, 51, 51)",
-    fern: "rgb(90, 174, 110)",
-    viola: "rgb(191, 127, 176)",
-    violaOpacity: "rgba(191, 127, 176, 0.4)",
+    moonGrey: 'rgb(51, 51, 51)',
+    fern: 'rgb(90, 174, 110)',
+    viola: 'rgb(191, 127, 176)',
+    violaOpacity: 'rgba(191, 127, 176, 0.4)',
   },
   mediaQuery: {
-    mobileWidth: "480px",
-    tabletWidth: "760px",
-    smallDesktopWidth: "990px",
-    desktopWidth: "1400px",
+    mobileWidth: '480px',
+    tabletWidth: '760px',
+    smallDesktopWidth: '990px',
+    desktopWidth: '1400px',
   },
 };
 

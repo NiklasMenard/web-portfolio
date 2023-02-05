@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { ReactComponent as DownArrow } from "../assets/down-arrow.svg";
-import { HashLink } from "react-router-hash-link";
+import styled from 'styled-components';
+import { ReactComponent as DownArrow } from '../assets/down-arrow.svg';
+import { HashLink } from 'react-router-hash-link';
 
 const ToBottomButton = () => (
   <StyledHashLink to="/#what-i-offer">
@@ -11,10 +11,10 @@ const ToBottomButton = () => (
 const StyledDownArrow = styled(DownArrow)`
   height: 3.5rem;
   width: 3.5rem;
-  background: ${(props) => props.theme.colors.lila};
+  background: ${({ theme }) => theme.colors.lila};
   border-radius: 50%;
   padding: 0.5rem;
-  fill: ${(props) => props.theme.colors.fern};
+  fill: ${({ theme }) => theme.colors.fern};
   -moz-animation: bounce 2s;
   -webkit-animation: bounce 2s;
   animation: bounce 2s;

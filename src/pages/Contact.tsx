@@ -1,16 +1,18 @@
-import React from "react";
-import ContactInfo from "../components/ContactInfo";
-import { MoonLayer, PancakeStack } from "../ComponentStyles";
-import Header from "../containers/Header";
-import MainContainer from "../containers/Main";
+import { useRef } from 'react';
+
+import ContactInfo from '../components/ContactInfo';
+import Header from '../containers/Header';
+import CenterSection from '../containers/CenterSection';
+
+import { MoonLayer, PancakeStack } from '../ComponentStyles';
 
 const Contact = () => {
   return (
     <PancakeStack>
       <Header />
-      <MainContainer>
-      <ContactInfo />
-      </MainContainer>
+      <CenterSection>
+        <ContactInfo />
+      </CenterSection>
       <MoonLayer />
     </PancakeStack>
   );

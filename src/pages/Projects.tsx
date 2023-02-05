@@ -1,16 +1,16 @@
-import React from "react";
-import ProjectList from "../components/ProjectList";
-import { MoonLayer, PancakeStack } from "../ComponentStyles";
-import MainContainer from "../containers/Main";
-import Header from "../containers/Header";
+import { MoonLayer, PancakeStack } from '../ComponentStyles';
+
+import ProjectList from '../components/ProjectList';
+import CenterSection from '../containers/CenterSection';
+import Header from '../containers/Header';
 
 const Projects = () => {
   return (
     <PancakeStack>
       <Header />
-      <MainContainer>
+      <CenterSection>
         <ProjectList />
-      </MainContainer>
+      </CenterSection>
       <MoonLayer />
     </PancakeStack>
   );
