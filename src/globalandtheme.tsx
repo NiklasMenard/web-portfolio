@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-y: scroll;
 
 
+
   &::-webkit-scrollbar {
     width: 1.5rem;
     height: 1rem;
@@ -75,9 +76,10 @@ h4 { font-size: 1.00rem; }
 h5 { font-size: 0.83rem; }
 h6 { font-size: 0.67rem; }
 
-img, svg, video, canvas {
+img, video, canvas {
   height: auto;
 }
+
 h1, h2, h3, h4, p, a, span, li {
   color: #eeeeee;
 }

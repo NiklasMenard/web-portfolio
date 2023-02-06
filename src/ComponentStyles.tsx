@@ -53,7 +53,7 @@ export const MoonLayer = styled.div`
   overflow: hidden;
   background-size: cover;
   background-position: 100% 100%;
-  min-height: 100%;
+  min-height: 100vh;
   pointer-events: none;
   position: fixed;
   z-index: 10;
