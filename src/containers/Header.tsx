@@ -1,45 +1,60 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FadeInEffect } from '../ComponentStyles';
+import HamburgerMenu from '../components/HamburgerMenu';
+
+const menuLinks = [
+  { label: 'About', link: '/' },
+  { label: 'Projects', link: '/projects' },
+  { label: 'Contact', link: '/contact' },
+];
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <Link to="/">About</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/contact">Contact</Link>
+      <HamburgerMenu menuItems={menuLinks} />
+      <LinkContainer>
+        <Link to="/">About</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
+      </LinkContainer>
     </HeaderContainer>
   );
 };
 
-const HeaderContainer = styled(FadeInEffect)`
+const HeaderContainer = styled.div`
+  grid-row: 1;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  background: linear-gradient(to bottom, rgb(51, 51, 51) 75%, transparent 100%);
+  min-height: 3.5rem;
+  a:not(:first-of-type) {
+    margin-left: 2rem;
+  }
+`;
+
+const LinkContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-row: 1;
+  margin: 0 auto;
+  max-width: 35rem;
+  min-height: 5rem;
+
   a {
     text-decoration: underline;
-  }
+    display: none;
 
-  a::after {
-    content: '';
-    background: white;
-    mix-blend-mode: exclusion;
-    width: calc(100% + 1rem);
-    height: 0;
-    position: absolute;
-    bottom: -0.25rem;
-    left: -0.7rem;
-    border-radius: 0.75rem;
-    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  }
+    @media ${({ theme }) => theme.devices.md} {
+      display: block;
+    }
 
-  a:hover::after {
-    height: calc(100% + 0.5rem);
-  }
-
-  a:not(:first-child) {
-    margin-left: 2rem;
+    &:not(:first-of-type) {
+      margin-left: auto;
+    }
   }
 `;
 

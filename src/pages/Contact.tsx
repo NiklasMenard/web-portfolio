@@ -5,9 +5,9 @@ import { CenterContainer } from '../ComponentStyles';
 
 const ContactInfo = () => {
   return (
-    <CenterContainer>
-      <h1>Best way to contact me is through LinkedIn</h1>
-      <h2>Checkout my GitHub as well</h2>
+    <AboutContainer>
+      <p>Best way to contact me is through LinkedIn</p>
+      <p>Checkout my GitHub as well</p>
       <IconBox>
         <a href="https://linkedin.com/in/niklas-menard">
           <LinkedinIcon xlinkHref="https://linkedin.com/in/niklas-menard" />
@@ -16,16 +16,25 @@ const ContactInfo = () => {
           <GithubIcon />
         </a>
       </IconBox>
-    </CenterContainer>
+    </AboutContainer>
   );
 };
+
+const AboutContainer = styled(CenterContainer)`
+  text-align: center;
+`;
 
 const IconBox = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
   svg {
     height: 3.5rem;
     width: 3.5rem;
+  }
+
+  a:first-of-type {
+    margin-right: 1.5rem;
   }
 `;
 

@@ -3,24 +3,26 @@ import { GlobalStyle, Theme } from './globalandtheme';
 
 import Header from './containers/Header';
 import PageRoutes from './PageRoutes';
-import Blobs from './containers/Blobs';
 
-import { MoonLayer, PancakeStack } from './ComponentStyles';
+import { MoonLayer, PancakeStack, ScrollWrapper } from './ComponentStyles';
+import CenterSection from './containers/CenterSection';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <GlobalStyle />
-      <Theme>
-        <PancakeStack>
-          <Header />
-          <PageRoutes />
-        </PancakeStack>
-      </Theme>
-
-      <MoonLayer />
-      <Blobs />
-    </BrowserRouter>
+    <ScrollWrapper>
+      <BrowserRouter>
+        <GlobalStyle />
+        <Theme>
+          <PancakeStack>
+            <Header />
+            <CenterSection>
+              <PageRoutes />
+            </CenterSection>
+          </PancakeStack>
+        </Theme>
+        <MoonLayer />
+      </BrowserRouter>
+    </ScrollWrapper>
   );
 };
 

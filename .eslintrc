@@ -2,7 +2,8 @@
     "root": true,
     "parser": "@typescript-eslint/parser",
     "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "typescript-styled-plugin"
     ],
     "extends": [
       "eslint:recommended",
@@ -11,10 +12,11 @@
     ],
     "overrides": [
       {
-        "files": ['*.jsx', '*.tsx'],
+        "files": ["*.jsx", "*.tsx"],
         "rules": {
-   "       @typescript-eslint/explicit-module-boundary-types": ['off'],
-        },
-      },
-    ],
+        "@typescript-eslint/explicit-module-boundary-types": ["off"],
+       "typescript-styled-plugin/css-in-js": "error"
+        }
+      }
+    ]
   }

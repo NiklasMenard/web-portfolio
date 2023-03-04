@@ -1,82 +1,113 @@
 import styled from 'styled-components';
 
-import ToBottomButton from '../components/ToBottomButton';
-import { CenterContainer, Row } from '../ComponentStyles';
+import { CenterContainer, GradientListItem, Row } from '../ComponentStyles';
 import { ReactComponent as ReactIcon } from '../assets/react.svg';
 import { ReactComponent as JavaScriptIcon } from '../assets/javascript.svg';
 import { ReactComponent as PHPIcon } from '../assets/php.svg';
 import { ReactComponent as TypeScriptIcon } from '../assets/typescript.svg';
 import { ReactComponent as CSharpIcon } from '../assets/csharp.svg';
+import { ReactComponent as HammerIcon } from '../assets/hammer-icon.svg';
 
 const About = () => {
   return (
-    <AboutSection>
-      <h1>Hi, my name is Niklas</h1>
+    <CenterContainer>
+      <TypedHeader>Hey there, I'm Niklas!</TypedHeader>
+
       <p>
-        I am a full-stack web and mobile developer with a passion for programming. I started my
-        journey as a hobbyist, but soon realized that it was my calling. To me, being a great
-        programmer requires an insatiable thirst for solving problems, and I relish the challenge of
-        overcoming obstacles along the way.
+        I'm a half-American and half-Finnish Full Stack Developer with a Bachelor’s degree in
+        Computer Science and International Business.
       </p>
-      <Row>
-        <h2>What do I offer</h2>
-        <ToBottomButton />
-      </Row>
-      <p id="what-i-offer">
-        I bring a unique blend of skills to the table, with a background in marketing, sales, and
-        finance, and a bachelor's degree in computer science. My diverse experience has given me a
-        deep understanding of customer needs and a strategic approach to solving complex problems.
-      </p>
+
+      <h2>What do I offer</h2>
+
+      <p>Combining expertise in marketing, sales, and programming, I offer a unique skillset.</p>
       <p>
         My aim is to leverage my technical skills and business acumen to deliver innovative
-        solutions that meet the needs of my clients. If you're looking for a talented developer who
-        can help bring your ideas to life, look no further.
+        solutions.
+      </p>
+
+      <p>
+        If you're looking for a talented developer who can help bring your ideas to life, look no
+        further.
       </p>
 
       <SkillsList>
-        <h2>My Technical skills</h2>
-        <li>
-          React <ReactIcon />
-        </li>
-        <li>
-          JavaScript <JavaScriptIcon />
-        </li>
-        <li>
-          PHP
+        <Row>
+          <h2>My Tech Toolbox</h2>
+          <HammerIcon />
+        </Row>
+
+        <SkillListItem>
+          <span>React</span> <ReactIcon />
+        </SkillListItem>
+        <SkillListItem>
+          <span>JavaScript</span>
+          <JavaScriptIcon />
+        </SkillListItem>
+        <SkillListItem>
+          <span>PHP</span>
+
           <PHPIcon />
-        </li>
-        <li>
-          TypeScript <TypeScriptIcon />
-        </li>
-        <li>
-          C# <CSharpIcon />
-        </li>
+        </SkillListItem>
+        <SkillListItem>
+          <span>TypeScript</span>
+          <TypeScriptIcon />
+        </SkillListItem>
+        <SkillListItem>
+          <span>C#</span>
+          <CSharpIcon />
+        </SkillListItem>
       </SkillsList>
-    </AboutSection>
+    </CenterContainer>
   );
 };
 
-const AboutSection = styled(CenterContainer)`
-  p {
-    text-align: left;
+const TypedHeader = styled.h1`
+  overflow: hidden;
+  border-right: 0.17em solid ${({ theme }) => theme.colors.melrose};
+  white-space: nowrap;
+  margin-right: auto;
+  letter-spacing: 0.15em;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
-  span {
-    font-size: 2rem;
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: ${({ theme }) => theme.colors.melrose};
+    }
   }
 `;
 
 const SkillsList = styled.ul`
-  span {
-  }
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
+  font-size: 0;
+  padding-top: 3rem;
   svg {
+    margin-left: 1rem;
     width: 2rem;
     height: 2rem;
+  }
+`;
+
+const SkillListItem = styled(GradientListItem)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  span {
+    margin-left: 2rem;
   }
 `;
 

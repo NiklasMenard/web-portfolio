@@ -3,62 +3,34 @@ import { PropsWithChildren } from 'react';
 
 const GlobalStyle = createGlobalStyle`
 
-  body {
+body {
     margin: 0; 
     padding: 0; 
     border: 0;
     background-color: #333333;
-    height: 100%;
-    overflow-y: scroll;
-
-
-
-  &::-webkit-scrollbar {
-    width: 1.5rem;
-    height: 1rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.05);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8);
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(left, #888, #777);
-  }
-
-  &::-webkit-scrollbar-thumb:active {
-    background: rgba(0, 0, 0, 0.9);
-  }
-
-  }
+}
 
 html {
-    height: 100%;
+    height: 100svh;
     scroll-behavior:smooth
-  }
+}
 
 #root {
-    height: 100%;
-  }
+    height: 100svh;
+}
 
 ul {
     padding: 0;
     list-style-type: none;
-  }
+    margin: 0;
+}
 
 
 *, *::after, *::before {
     box-sizing: border-box;
     font-family: IBM Plex Mono,monospace;
   }
+
   
 input, select, div {
     -webkit-box-sizing: border-box;
@@ -82,11 +54,26 @@ img, video, canvas {
 
 h1, h2, h3, h4, p, a, span, li {
   color: #eeeeee;
+  letter-spacing: 0.1em;
 }
+
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+span, p {
+  line-height: 1.75;
+
+}
+
 img { border-style: none; }
 
-h1, h2, h3, a, li {
-  font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+h1 {
+  font-size: clamp(1.2rem,  -0.875rem + 8.333vw, 2.1rem);
+}
+
+h2, h3, a, li {
+  font-size: clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
 }
 
 p {
@@ -97,22 +84,60 @@ a{
   display: block;
   text-decoration: none;
   position: relative;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
+a::after {
+    content: '';
+    background: white;
+    mix-blend-mode: exclusion;
+    width: calc(100% + 1rem);
+    height: 0;
+    position: absolute;
+    bottom: -0.25rem;
+    left: -0.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  @media (min-width: 1024px) {
+    a:hover::after {
+    height: calc(100% + 0.5rem);
+  }
+  }
 
 `;
 
+const breakpoints = {
+  xs: '320px',
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px',
+  '2xl': '1536px',
+};
+
 const theme: DefaultTheme = {
+  devices: {
+    xs: `(min-width: ${breakpoints.xs})`,
+    sm: `(min-width: ${breakpoints.sm})`,
+    md: `(min-width: ${breakpoints.md})`,
+    lg: `(min-width: ${breakpoints.lg})`,
+    xl: `(min-width: ${breakpoints.xl})`,
+  },
   colors: {
     moonGrey: 'rgb(51, 51, 51)',
-    fern: 'rgb(90, 174, 110)',
-    viola: 'rgb(191, 127, 176)',
-    violaOpacity: 'rgba(191, 127, 176, 0.4)',
-  },
-  mediaQuery: {
-    mobileWidth: '480px',
-    tabletWidth: '760px',
-    smallDesktopWidth: '990px',
-    desktopWidth: '1400px',
+    shamrock: 'rgb(73, 209, 169)',
+    melrose: 'rgb(114, 103, 225)',
+    YlnmnBlue: 'rgb(73, 81, 111)',
+    mediumPurple: 'rgb(114, 103, 225)',
   },
 };
 
