@@ -102,7 +102,7 @@ const OrangeBlobs = styled.svg`
   bottom: 45%;
 
   @media only screen and (max-width: 760px) {
-    bottom: 30%;
+    bottom: 10%;
     right: -30%;
   }
 `;
