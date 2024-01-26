@@ -18,7 +18,7 @@ const ProjectList = () => {
         </ProjectListItem>
 
         <ProjectListItem>
-          <h2>Random Maze Generator</h2>
+          <h2>Maze Generator</h2>
           <ThoughtBubbleIcon />
           <p>A fun small-scale Java game that challenges you to navigate a maze.</p>
           <p>With each play, a unique maze is generated using a depth-first search algorithm.</p>
@@ -26,7 +26,7 @@ const ProjectList = () => {
         </ProjectListItem>
 
         <ProjectListItem>
-          <h2>Dijktra's algorithm</h2>
+          <h2>Dijktra's</h2>
           <ThoughtBubbleIcon />
           <p>
             As part of a school assignment, I successfully implemented Dijkstra's shortest path
@@ -54,14 +54,14 @@ const StyledProjectList = styled.ul`
   }
   svg {
     position: absolute;
-    top: 1rem;
-    right: 0.75rem;
+    top: 0.9rem;
+    right: 0.5rem;
     width: 2.5rem;
   }
 `;
 
 const ProjectListItem = styled(GradientListItem)`
-  padding: 1rem clamp(1.5rem, -0.875rem + 8.333vw, 2rem);
+  padding: 1rem;
   margin: 0.5rem;
   margin-bottom: 2rem;
   position: relative;

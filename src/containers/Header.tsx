@@ -31,6 +31,7 @@ const HeaderContainer = styled.div`
   z-index: 15;
   background: linear-gradient(to bottom, rgb(51, 51, 51) 75%, transparent 100%);
   min-height: 3.5rem;
+  margin-right: 1rem;
   a:not(:first-of-type) {
     margin-left: 2rem;
   }

@@ -35,12 +35,6 @@ export const CenterContainer = styled(FadeInEffect)<ICenterContainer>`
   margin: 0 1.3rem;
   hyphens: auto;
   word-break: normal;
-  div,
-  ul {
-    &:last-child {
-      padding-bottom: 40vh;
-    }
-  }
 `;
 
 export const ScrollWrapper = styled.div`
@@ -52,7 +46,6 @@ export const ScrollWrapper = styled.div`
     width: 1rem;
     height: 1rem;
     display: none;
-
     @media (min-width: 1024px) {
       display: block;
     }
