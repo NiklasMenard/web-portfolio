@@ -7,6 +7,21 @@ const ProjectList = () => {
     <CenterContainer>
       <StyledProjectList>
         <ProjectListItem>
+          <h2>Rust blog</h2>
+          <ThoughtBubbleIcon />
+          <p>
+            This project serves as a platform for me to explore and learn the Rust programming
+            language while building a foundational blog API.
+          </p>
+
+          <p>
+            As I progress, I plan to transform this initial learning exercise into a more practical
+            and feature-rich application.
+          </p>
+          <a href="https://github.com/NiklasMenard/rust_blog">Github</a>
+        </ProjectListItem>
+
+        <ProjectListItem>
           <h2>Beach Volley</h2>
           <ThoughtBubbleIcon />
           <p>
