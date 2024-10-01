@@ -7,18 +7,16 @@ const ProjectList = () => {
     <CenterContainer>
       <StyledProjectList>
         <ProjectListItem>
-          <h2>Rust blog</h2>
+          <h2>Re-vibe</h2>
           <ThoughtBubbleIcon />
           <p>
-            This project serves as a platform for me to explore and learn the Rust programming
-            language while building a foundational blog API.
+            This project is designed to showcase a demo website for selling used clothing and
+            potentially other items in the future. The aim is to create a platform where users can
+            list, browse, and purchase second-hand clothes.
           </p>
-
-          <p>
-            As I progress, I plan to transform this initial learning exercise into a more practical
-            and feature-rich application.
-          </p>
-          <a href="https://github.com/NiklasMenard/rust_blog">Github</a>
+          <div></div>
+          <a href="https://demo.niklasmenard.xyz/">Visit demo site</a>
+          <a href="https://github.com/NiklasMenard/re-vibe">Github</a>
         </ProjectListItem>
 
         <ProjectListItem>
@@ -76,6 +74,8 @@ const StyledProjectList = styled.ul`
 `;
 
 const ProjectListItem = styled(GradientListItem)`
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   margin: 0.5rem;
   margin-bottom: 2rem;
