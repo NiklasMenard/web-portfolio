@@ -1,12 +1,13 @@
-import styled from 'styled-components';
-
-import { CenterContainer, GradientListItem, Row } from '../ComponentStyles';
-import { ReactComponent as ReactIcon } from '../assets/react.svg';
-import { ReactComponent as JavaScriptIcon } from '../assets/javascript.svg';
-import { ReactComponent as PHPIcon } from '../assets/php.svg';
-import { ReactComponent as TypeScriptIcon } from '../assets/typescript.svg';
-import { ReactComponent as CSharpIcon } from '../assets/csharp.svg';
-import { ReactComponent as HammerIcon } from '../assets/hammer-icon.svg';
+import styled from "styled-components";
+import { CenterContainer, GradientListItem, Row } from "../ComponentStyles";
+import { ReactComponent as ReactIcon } from "../assets/react.svg";
+import { ReactComponent as JavaScriptIcon } from "../assets/javascript.svg";
+import { ReactComponent as PHPIcon } from "../assets/php.svg";
+import { ReactComponent as TypeScriptIcon } from "../assets/typescript.svg";
+import { ReactComponent as CSharpIcon } from "../assets/csharp.svg";
+import { ReactComponent as HammerIcon } from "../assets/hammer-icon.svg";
+import { ReactComponent as AzureIcon } from "../assets/azure.svg";
+import { ReactComponent as RustIcon } from "../assets/rust.svg";
 
 const About = () => {
   return (
@@ -14,21 +15,24 @@ const About = () => {
       <TypedHeader>Hey there, I'm Niklas!</TypedHeader>
 
       <p>
-        I'm a half-American and half-Finnish Full Stack Developer with a Bachelor’s degree in
-        Computer Science and International Business.
+        I'm a half-American and half-Finnish Full Stack Developer with a
+        Bachelor’s degree in Computer Science and International Business.
       </p>
 
       <h2>What do I offer</h2>
 
-      <p>Combining expertise in marketing, sales, and programming, I offer a unique skillset.</p>
       <p>
-        My aim is to leverage my technical skills and business acumen to deliver innovative
-        solutions.
+        Combining expertise in marketing, sales, and programming, I offer a
+        unique skillset.
+      </p>
+      <p>
+        My aim is to leverage my technical skills and business acumen to deliver
+        innovative solutions.
       </p>
 
       <p>
-        If you're looking for a talented developer who can help bring your ideas to life, look no
-        further.
+        If you're looking for a talented developer who can help bring your ideas
+        to life, look no further.
       </p>
 
       <SkillsList>
@@ -45,17 +49,24 @@ const About = () => {
           <JavaScriptIcon />
         </SkillListItem>
         <SkillListItem>
-          <span>PHP</span>
-
-          <PHPIcon />
-        </SkillListItem>
-        <SkillListItem>
           <span>TypeScript</span>
           <TypeScriptIcon />
         </SkillListItem>
         <SkillListItem>
+          <span>Rust</span>
+          <RustIcon style={{ width: "3rem", height: "3rem" }} />
+        </SkillListItem>
+        <SkillListItem>
           <span>C#</span>
           <CSharpIcon />
+        </SkillListItem>
+        <SkillListItem>
+          <span>Azure</span>
+          <AzureIcon />
+        </SkillListItem>
+        <SkillListItem>
+          <span>PHP</span>
+          <PHPIcon />
         </SkillListItem>
       </SkillsList>
     </CenterContainer>
