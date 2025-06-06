@@ -10,12 +10,12 @@ const ProjectList = () => {
           <h2>Re-vibe</h2>
           <ThoughtBubbleIcon />
           <p>
-            This project is designed to showcase a demo website for selling used clothing and
-            potentially other items in the future. The aim is to create a platform where users can
-            list, browse, and purchase second-hand clothes.
+            This project is designed to showcase a demo website for selling used clothing and potentially
+            other items in the future. The aim is to create a platform where users can list, browse, and
+            purchase second-hand clothes.
           </p>
           <div></div>
-          <a href="https://demo.niklasmenard.xyz/">Visit demo site</a>
+          <a href="https://www.demo.niklasmenard.com/">Visit demo site</a>
           <a href="https://github.com/NiklasMenard/re-vibe">Github</a>
         </ProjectListItem>
 
@@ -23,8 +23,8 @@ const ProjectList = () => {
           <h2>Beach Volley</h2>
           <ThoughtBubbleIcon />
           <p>
-            As part of a university project course, I worked on a team that developed a progressive
-            web app for arranging beach volley games.
+            As part of a university project course, I worked on a team that developed a progressive web app
+            for arranging beach volley games.
           </p>
           <p>It had a React, Graphile, and ApolloClient stack.</p>
           <a href="https://github.com/NiklasMenard/beach-volley-app">Github</a>
@@ -42,13 +42,12 @@ const ProjectList = () => {
           <h2>Dijktra's</h2>
           <ThoughtBubbleIcon />
           <p>
-            As part of a school assignment, I successfully implemented Dijkstra's shortest path
-            algorithm using Python.
+            As part of a school assignment, I successfully implemented Dijkstra's shortest path algorithm
+            using Python.
           </p>
 
           <p>
-            This algorithm allows for finding the most efficient path between nodes in a specific
-            context.
+            This algorithm allows for finding the most efficient path between nodes in a specific context.
           </p>
           <a href="https://github.com/NiklasMenard/dijkstra_shortest_path">Github</a>
         </ProjectListItem>
